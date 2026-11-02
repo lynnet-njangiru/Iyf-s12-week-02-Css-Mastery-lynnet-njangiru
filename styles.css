@@ -1,0 +1,401 @@
+/* =========================================
+   WEEK 2 DAILY CHALLENGES
+   One stylesheet for all five pages
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #0f766e;
+    --green-dark: #115e59;
+    --green-light: #ccfbf1;
+    --orange: #f97316;
+    --red: #dc2626;
+    --dark: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --page: #f8fafc;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--page);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--orange);
+    outline-offset: 2px;
+}
+
+.challenge-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.challenge-page h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.challenge-page > p {
+    margin-bottom: 24px;
+    color: var(--muted);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 32px;
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   DAY 1: BUTTON STYLES
+   ========================================= */
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease,
+        transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--green-dark);
+}
+
+.btn-secondary {
+    border-color: var(--green);
+    background-color: transparent;
+    color: var(--green-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--green-light);
+}
+
+.btn-danger {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+}
+
+.btn-disabled {
+    background-color: #cbd5e1;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: #cbd5e1;
+}
+
+/* =========================================
+   DAY 2: CARD COMPONENT
+   ========================================= */
+.demo-card {
+    max-width: 340px;
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.demo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.15);
+}
+
+.demo-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.demo-card-body {
+    padding: 20px;
+}
+
+.demo-card-body h2 {
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.demo-card-body p {
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.card-tags span {
+    padding: 3px 9px;
+    border-radius: 999px;
+    background-color: var(--green-light);
+    color: var(--green-dark);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* =========================================
+   DAY 3: HERO SECTION
+   ========================================= */
+.hero-demo {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    text-align: center;
+    color: var(--white);
+    background-image:
+        linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+        url("https://placehold.co/1600x900/0f766e/ffffff?text=Background+Image");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #ea580c;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   DAY 4: FORM STYLING
+   ========================================= */
+.form-demo {
+    max-width: 560px;
+    padding: 24px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--page);
+    color: var(--dark);
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--green);
+    background-color: var(--white);
+}
+
+/* Error state: only after the user has typed something */
+.field input:invalid:not(:placeholder-shown),
+.field textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--red);
+}
+
+.field input:invalid:not(:placeholder-shown) + .error-text,
+.field textarea:invalid:not(:placeholder-shown) + .error-text {
+    display: block;
+}
+
+.error-text {
+    display: none;
+    margin-top: 4px;
+    color: var(--red);
+    font-size: 13px;
+}
+
+.form-demo button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-demo button:hover {
+    background-color: var(--green-dark);
+}
+
+/* =========================================
+   DAY 5: FOOTER DESIGN
+   ========================================= */
+.footer-demo {
+    padding: 40px 24px 16px;
+    background-color: #0f172a;
+    color: #cbd5e1;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-col h2 {
+    margin-bottom: 10px;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.footer-col ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 4px;
+}
+
+.footer-col a {
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-copy {
+    max-width: 1000px;
+    margin: 32px auto 0;
+    padding-top: 16px;
+    border-top: 1px solid #334155;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 56px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
